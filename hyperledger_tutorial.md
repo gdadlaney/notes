@@ -48,12 +48,14 @@ Hyperledger video series by Ivan Vankov - https://www.youtube.com/playlist?list=
     - Throughput can be increased by adjusting config.(Kafka can reach 1000s of transactions/min?)
 
 # v5 Channels - main way for data isolation
-- Can be thought of a separate instance of fabric. A ledger is inside a channel.
+- Can be thought of a separate instance of fabric. A ledger is inside a channel. Channels are inside peers.
 - Every channel is independent. A peer may be a part of mulitple channels.
 - n peers can be added to a channel. Hence, many-to-many mapping.
-- every single party must agree to let a party join.
+- Every single party must agree to let a party join.
+- Every channel has its own chaincode. - draw a diag. to represent structure.
 
 # v6 Chaincode
+- Mostly used to conduct business processes. One or more Chaincodes may be used for a process.
 - SDK makes a transactions, it is sent to peer, and peer executes the chaincode.
 - Responsibility: Only thing that can read & update ledger data.
 - Flexible: Can use external libraries, data from certificate(e.g-role of that user), parameters passed.
@@ -63,10 +65,12 @@ Hyperledger video series by Ivan Vankov - https://www.youtube.com/playlist?list=
 - Chaincode must first be `installed` and then `instantiated`.
 - Installation of the chaincode in all peers in the channel, can be done using the SDK.
 - During intantiation, the container will make all the connections, security verification, after which the chaincode is ready for use.
-- Policy:
-    - A policy needs to be provided before instantiation. 1 policy per chaincode.
+- Endorsement Policy:
+    - A policy needs to be provided before instantiation. Every chaincode has its own policy.
     - Policy determines who verifies the operation before adding it to the ledger.
     - e.g- Any member or org1, any of org2, any of org3 to verify that the operation is valid.
     - What it verifies: Checks if security, certificate attributes, provenance is valid.
-- Haven't finished watching video...
-    
+    - Useful when multiple organizations are involved, running their own processes. (ch how can it help our project where there are multiple organizations but all run on the same process).
+
+# v7 Explanation of endorsement & simulation
+- 

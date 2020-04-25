@@ -22,7 +22,7 @@ g++ -std=c++11
 
 ## 2. Python like reverse addressing (check)
 - An arr[-2] equivalent in cpp would be
-- *(arr.back()-1) or *(map.rbegin()+1) (since maps don't have .back() )
+- *(arr.end()-1) or *(map.rbegin()+1)
 
 # Conversions
 ## 1.a. string to number in C++11
@@ -51,6 +51,8 @@ g++ -std=c++11
 ### Other great standard functions -
 - std::find()
 - replace()
+- max_element(v.begin(), v.end(), )
+- priority_queue<double>    // max heap
 
 ### Not understood -
 - for_each()

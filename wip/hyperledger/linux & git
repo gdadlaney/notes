@@ -1,0 +1,13 @@
+- curl can be sued for downloading scripts
+send get/post requests to test rest api
+
+- in xorg, once you highlight something in is stored in a separate clipboard
+centerclick to paste (left+right key)
+2 clipboards are very useful
+Note: Always use the ctrl+c buffer before highight buffer.
+
+- env command
+
+# Git -
+- git can also be configured on localhost(git server?) and people in the network can set that as the origin url to collaborate locally - SIH, better than vsftpd? It may still be better to create quick repo in github though :)
+- .git/config - contains the origin url

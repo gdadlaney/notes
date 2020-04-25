@@ -1,0 +1,1 @@
+only Owner chaincode can access the data they write

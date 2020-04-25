@@ -1,0 +1,22 @@
+Folder 4 - Ubuntu vm installation - Ignore folder 4
+
+vagrant - worflow atutomation tool(ch) - configures vm
+- can run docker inside a vagrant vm.
+- conatins a `vagrantfile` as a config file
+- specifies -
+1. Base Image for vm
+2. Folders synceed from FS
+3. Exported parts
+- Basic vargrant commands - Start, stop, enter cli, delete vm // just like docker
+
+
+use composer tool to connect with fabric in the vm trough tcp connection
+
+
+Install scripts
+- pre-req script - node, python, docker, curl
+- fabric tools script
+- install composer script // composer tools
+
+After installation of fabric, 4 docker container are running -
+peer, ca, couchdb, orderer
